@@ -1,15 +1,17 @@
 # 曹思微个人作品集 · GitHub Pages 版本
 
-这个目录是可放到你自己 GitHub 仓库的独立网站项目，不依赖 `git.chatgpt-team.site`。`dist` 包含完整静态网站，`.github/workflows/pages.yml` 在推送 `main` 后自动发布。
+这是 [2659087566-glitch/portfolio](https://github.com/2659087566-glitch/portfolio) 的网站源文件，不依赖 `git.chatgpt-team.site`。`dist` 包含完整静态网站，`.github/workflows/pages.yml` 在推送 `main` 后自动发布。
 
-## 发布到你自己的仓库
+## 启用 GitHub Pages
 
-1. 在你的 GitHub 账号下新建一个空仓库。建议设为 Public，仓库名可用 `siwei-portfolio`。
-2. 把**本目录中的文件和文件夹**上传到仓库根目录，包括隐藏的 `.github` 文件夹。可用 GitHub 网页的 **Add file → Upload files** 上传，无需在电脑上输入 Git 凭据。
-3. 打开仓库的 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。
-4. 在 **Actions** 中查看 `Deploy portfolio to GitHub Pages`。部署成功后，Pages 设置页会显示你的公开网址。
+网站文件已上传至仓库。首次自动部署提示仓库尚未启用 Pages。仓库所有者需要完成一次设置：
 
-如果你把自己仓库的 URL 发给我，我可以将本地 Git 远程地址指向它，并协助完成后续步骤。仓库地址不要包含密码或访问令牌。
+1. 打开 [仓库 Pages 设置](https://github.com/2659087566-glitch/portfolio/settings/pages)。
+2. 在 **Build and deployment → Source** 选择 **GitHub Actions**。
+3. 回到 [Actions](https://github.com/2659087566-glitch/portfolio/actions)，重新运行失败的 `Deploy portfolio to GitHub Pages` 工作流，或向 `main` 推送任意一次修改。
+4. 部署成功后，GitHub Pages 网址将是 `https://2659087566-glitch.github.io/portfolio/`。
+
+当前另有一个已公开的在线版本：<https://siwei-cao-portfolio-2026.dreamycreek24.chatgpt.site>。
 
 ## 修改内容
 
