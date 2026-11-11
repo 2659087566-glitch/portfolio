@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out site
         uses: actions/checkout@v4
+      - name: Verify dist output and relative assets
+        run: node scripts/verify-build.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site

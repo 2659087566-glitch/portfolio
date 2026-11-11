@@ -4,12 +4,12 @@
 
 ## 启用 GitHub Pages
 
-网站文件已上传至仓库。首次自动部署提示仓库尚未启用 Pages。仓库所有者需要完成一次设置：
+网站文件已上传至仓库。`dist/index.html` 是完整作品集入口。仓库根目录的 `index.html` 会在 GitHub Pages 使用 `main` 分支发布时跳转到它，避免打开 README。
 
 1. 打开 [仓库 Pages 设置](https://github.com/2659087566-glitch/portfolio/settings/pages)。
 2. 在 **Build and deployment → Source** 选择 **GitHub Actions**。
-3. 回到 [Actions](https://github.com/2659087566-glitch/portfolio/actions)，重新运行失败的 `Deploy portfolio to GitHub Pages` 工作流，或向 `main` 推送任意一次修改。
-4. 部署成功后，GitHub Pages 网址将是 `https://2659087566-glitch.github.io/portfolio/`。
+3. 选择后，向 `main` 推送一次修改，或在 [Actions](https://github.com/2659087566-glitch/portfolio/actions) 手动运行 `Deploy portfolio to GitHub Pages`。
+4. 公开网址是 <https://2659087566-glitch.github.io/portfolio/>。
 
 当前另有一个已公开的在线版本：<https://siwei-cao-portfolio-2026.dreamycreek24.chatgpt.site>。
 
@@ -21,3 +21,5 @@
 - `dist/assets`：76 张优化后的作品图片
 
 网站使用相对路径，可部署在 GitHub Pages 的仓库子路径下。图片素材版权仍归原作者及对应品牌所有。
+
+本项目没有额外构建步骤；`dist` 就是可发布文件。工作流会运行 `scripts/verify-build.mjs` 检查入口、资源文件和项目图片，再上传 `dist`。
